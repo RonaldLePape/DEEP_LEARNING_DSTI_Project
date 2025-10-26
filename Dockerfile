@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir gradio ultralytics pillow numpy
 
 # Copier le code + poids
-COPY Web_app_gradio.py /app/
+COPY web_app_gradio.py /app/
 # Place ton best.pt à côté du Dockerfile puis copie-le :
 COPY weights/best.pt /app/weights/best.pt
 
