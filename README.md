@@ -1,2 +1,2 @@
-\# Deep Learning project at DSTI
+# Deep Learning project at DSTI
 
