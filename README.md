@@ -37,7 +37,7 @@ The model has been trained for 50 epoch : 20 would be enough ...
 python learning_curve.py
 ```
 
-![Learning_curve](./images/learning_curve.png)
+![Learning_curve](./images/Learning_curve.png)
 
 
 
