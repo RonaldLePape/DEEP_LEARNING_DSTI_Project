@@ -14,7 +14,7 @@ docker build -t webapp:latest .
 aws ecr create-repository --repository-name dsti_project
 ```
 
-  - output:
+output:
 
 {
     "repository": {
