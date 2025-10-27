@@ -31,13 +31,25 @@ python train.py
 
 - Learning curve:
 
-The model has been trained for 50 epoch : 20 would be enough ...
+The model has been trained for 50 epoch : 20 would have been enough !
 
 ```
 python learning_curve.py
 ```
 
 ![Learning_curve](./images/Learning_curve.png)
+
+
+## Making inferences
+
+- A small web application has been created using python and gradio (web_app_gradio.py). The app is run within a Docker container which has been deployed as an "AWS App Runner" service:
+
+
+![AWS_App_Runner](./images/AWS_App_Runner.png)
+
+
+
+
 
 
 
