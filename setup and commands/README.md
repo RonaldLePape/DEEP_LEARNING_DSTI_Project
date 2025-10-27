@@ -6,9 +6,9 @@
 docker build -t webapp:latest .
 ```
 
-# Below are the AWS commands used to create "AWS App Runner" service 
+# Below are the AWS commands used to push Docker ilmage to "AWS ECR"  (Elastic Container Registry) 
 
-- Creating a ECR (Elastic Container Registry) repo named "dsti_project":
+- Creating a ECR repo named "dsti_project":
 
 ```
 aws ecr create-repository --repository-name dsti_project
@@ -48,7 +48,7 @@ $AWS_ACCOUNT_ID = (aws sts get-caller-identity --query Account --output text)
 AWS_ACCOUNT_ID
 ```
 
-  - output:
+output:
 
 175416526520
 
@@ -70,10 +70,11 @@ docker tag webapp:latest "$($repo):latest"
 - Check:
 
 ```
+(powershell)
 docker images
 ```
 
-  - output:
+output:
 
 REPOSITORY                                                  TAG       IMAGE ID       CREATED         SIZE
 175416526520.dkr.ecr.eu-west-3.amazonaws.com/dsti_project   latest    8eea29913c9b   21 hours ago    3.86GB
@@ -86,7 +87,7 @@ REPOSITORY                                                  TAG       IMAGE ID  
 aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin "$($AWS_ACCOUNT_ID).dkr.ecr.$($REGION).amazonaws.com"
 ```
 
-  - output:
+output:
 
 Login Succeeded
 
@@ -98,7 +99,7 @@ Login Succeeded
 docker push $($AWS_ACCOUNT_ID).dkr.ecr.$($REGION).amazonaws.com/dsti_project:latest
 ```
 
-  - output:
+output:
 
 The push refers to repository [175416526520.dkr.ecr.eu-west-3.amazonaws.com/dsti_project]
 e268421f9ff1: Pushed
